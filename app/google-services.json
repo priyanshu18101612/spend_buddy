@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "489205150371",
+    "project_id": "spendbuddy-bfc8b",
+    "storage_bucket": "spendbuddy-bfc8b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489205150371:android:90e8b79b304747cd070516",
+        "android_client_info": {
+          "package_name": "com.priyanshu.spend_buddy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiZNtAlurqlmlWGKS6_wc-jPryNF-JJZ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

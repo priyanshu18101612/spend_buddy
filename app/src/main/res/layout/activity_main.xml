@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_gradient">
+
+    <!-- 🔥 SCROLL CONTENT -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- HEADER -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Your Expenses"
+                    android:textSize="24sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/settingsIcon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_settings"
+                    app:tint="#00E676" />
+            </RelativeLayout>
+
+            <!-- 🔥 TOP CARDS (GLASS + GLOW) -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- CARD -->
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:background="@drawable/glow_card_bg"
+                    android:layout_marginEnd="6dp"
+                    android:padding="14dp"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:animation="@anim/slide_up">
+
+                    <TextView
+                        android:text="This Month"
+                        android:textColor="#94A3B8"
+                        android:textSize="12sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"/>
+
+                    <TextView
+                        android:id="@+id/tvMonth"
+                        android:text="₹0"
+                        android:textSize="20sp"
+                        android:textColor="#00E676"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"/>
+                </LinearLayout>
+
+                <!-- CARD -->
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:background="@drawable/card_bg"
+                    android:layout_marginEnd="6dp"
+                    android:padding="14dp"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:animation="@anim/slide_up">
+
+                    <TextView
+                        android:text="Left"
+                        android:textColor="#94A3B8"
+                        android:textSize="12sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"/>
+
+                    <TextView
+                        android:id="@+id/tvLeft"
+                        android:text="₹0"
+                        android:textSize="20sp"
+                        android:textColor="#38BDF8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"/>
+                </LinearLayout>
+
+                <!-- CARD -->
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:background="@drawable/card_bg"
+                    android:padding="14dp"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:animation="@anim/slide_up">
+
+                    <TextView
+                        android:text="Budget"
+                        android:textColor="#94A3B8"
+                        android:textSize="12sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvBudget"
+                        android:text="₹0"
+                        android:textSize="20sp"
+                        android:textColor="#FACC15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 🌳 MONEY TREE CARD -->
+
+            <LinearLayout
+                android:id="@+id/treeCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:padding="16dp"
+                android:orientation="horizontal"
+                android:background="@drawable/card_bg"
+                android:gravity="center_vertical">
+
+                <!-- LEFT SIDE -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="316dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="🌳Money Tree"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Save more, grow your tree!"
+                        android:textColor="#94A3B8"
+                        android:textSize="13sp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/poppins_regular"/>
+
+                    <TextView
+                        android:id="@+id/tvTreeLevel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🌱 Seed"
+                        android:textColor="#00E676"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:layout_marginTop="14dp"/>
+
+                    <TextView
+                        android:id="@+id/tvTreeProgress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹0 / ₹5000"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:layout_marginTop="4dp"/>
+
+                    <ProgressBar
+                        android:id="@+id/treeProgress"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:progressDrawable="@drawable/tree_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:layout_marginTop="10dp"
+                        android:max="100"
+                        android:progress="0"/>
+
+                    <TextView
+                        android:id="@+id/tvLeaves"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🍃 0 Leaves"
+                        android:textColor="#00E676"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:layout_marginTop="12dp"/>
+
+                </LinearLayout>
+                <!-- 🌳 TREE + FLOATING LEAVES -->
+
+                <FrameLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="12dp">
+
+                    <!-- Tree -->
+                    <ImageView
+                        android:id="@+id/imgTree"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/tree_seed"/>
+
+                    <!-- Leaf 1 -->
+                    <ImageView
+                        android:id="@+id/leaf1"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="25dp"
+                        android:alpha="0.75"
+                        android:src="@drawable/leaf"/>
+
+                    <!-- Leaf 2 -->
+                    <ImageView
+                        android:id="@+id/leaf2"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginEnd="12dp"
+                        android:alpha="0.65"
+                        android:src="@drawable/leaf"/>
+
+                    <!-- Leaf 3 -->
+                    <ImageView
+                        android:id="@+id/leaf3"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="15dp"
+                        android:alpha="0.8"
+                        android:src="@drawable/leaf"/>
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="18dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/card_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animation="@anim/fade_in">
+
+                <TextView
+                    android:text="Expense Overview 📊"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"/>
+            </LinearLayout>
+
+            <!-- 🔥 RECENT -->
+            <TextView
+                android:text="Recent Expenses"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_bold"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 🔥 BOTTOM NAV -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:background="#0F172A"
+        app:menu="@menu/bottom_menu"
+        app:itemIconTint="#00E676"
+        app:itemTextColor="#00E676"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 🔥 FLOATING BUTTON -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="#00E676"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="#000000"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

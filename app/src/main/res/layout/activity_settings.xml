@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/splash_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <!-- HEADER -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_back"
+                app:tint="#FFFFFF"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:text="Settings"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:fontFamily="@font/poppins_bold"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+
+            android:id="@+id/profileCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="8dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#20FFFFFF"
+            app:cardBackgroundColor="@android:color/transparent">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="22dp"
+                android:background="@drawable/card_bg">
+
+                <ImageView
+
+                    android:id="@+id/profileImage"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/logo_spendbuddy"/>
+
+                <TextView
+
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Priyanshu Ranjan"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/poppins_bold"/>
+
+                <TextView
+
+                    android:id="@+id/tvRole"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Smart Saver 🌱"
+                    android:textColor="#94A3B8"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_regular"/>
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="18dp"
+
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:padding="10dp"
+
+                        android:background="@drawable/card_bg"
+
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:text="🍃"
+
+                            android:textSize="18sp"
+
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+
+                            android:id="@+id/tvLeaves"
+
+                            android:text="248"
+
+                            android:textColor="#00E676"
+
+                            android:textStyle="bold"
+
+                            android:layout_marginStart="6dp"
+
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <Space
+
+                        android:layout_width="14dp"
+
+                        android:layout_height="1dp"/>
+
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+
+                        android:padding="10dp"
+
+                        android:background="@drawable/card_bg"
+
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:text="🏆"
+
+                            android:textSize="18sp"
+
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+
+                            android:id="@+id/tvLevel"
+
+                            android:text="Level 7"
+
+                            android:textColor="#FFD54F"
+
+                            android:textStyle="bold"
+
+                            android:layout_marginStart="6dp"
+
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ================= PREFERENCES ================= -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="12dp"
+            android:text="Preferences"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_bold"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="6dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#20FFFFFF"
+            app:cardBackgroundColor="@android:color/transparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_bg"
+                android:padding="8dp">
+
+                <!-- Daily Budget -->
+
+                <LinearLayout
+                    android:id="@+id/layoutBudget"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="12dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="💰 Daily Budget"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/tvBudget"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹500"
+                        android:textColor="#00E676"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#22FFFFFF"/>
+
+                <!-- Notifications -->
+
+                <LinearLayout
+                    android:id="@+id/layoutNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🔔 Notifications"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"/>
+
+                    <Switch
+                        android:id="@+id/switchNotification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="48dp"
+                        android:minHeight="48dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#22FFFFFF"/>
+
+                <!-- Dark Mode -->
+
+                <LinearLayout
+                    android:id="@+id/layoutDarkMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🌙 Dark Mode"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Coming Soon"
+                        android:textColor="#94A3B8"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <!-- ================= DATA & SECURITY ================= -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="12dp"
+            android:text="Data &amp; Security"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_bold"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="6dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#20FFFFFF"
+            app:cardBackgroundColor="@android:color/transparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_bg"
+                android:padding="8dp">
+
+                <!-- Export -->
+
+                <LinearLayout
+                    android:id="@+id/layoutExport"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="📤 Export Expenses"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"/>
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="#94A3B8"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#22FFFFFF"/>
+
+                <!-- Clear Data -->
+
+                <LinearLayout
+                    android:id="@+id/layoutClearData"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🗑 Clear All Data"
+                        android:textColor="#FF6B6B"
+                        android:textSize="16sp"/>
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="#94A3B8"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#22FFFFFF"/>
+
+                <!-- Privacy -->
+
+                <LinearLayout
+                    android:id="@+id/layoutPrivacy"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🔒 Privacy Policy"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"/>
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="#94A3B8"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#22FFFFFF"/>
+
+                <!-- Terms -->
+
+                <LinearLayout
+                    android:id="@+id/layoutTerms"
+                    android:layout_width="match_parent"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="📜 Terms &amp; Conditions"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"/>
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="#94A3B8"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <!-- ================= SUPPORT ================= -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="12dp"
+            android:text="Support &amp; About"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_bold"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="6dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#20FFFFFF"
+            app:cardBackgroundColor="@android:color/transparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_bg"
+                android:padding="8dp">
+
+                <!-- Contact -->
+
+                <LinearLayout
+                    android:id="@+id/layoutContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="📧 Contact Developer"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"/>
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="#94A3B8"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#22FFFFFF"/>
+
+                <!-- GitHub -->
+
+                <LinearLayout
+                    android:id="@+id/layoutGithub"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:contentDescription="TODO"
+                        android:text="💻 GitHub"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"/>
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="#94A3B8"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#22FFFFFF"/>
+
+                <!-- LinkedIn -->
+
+                <LinearLayout
+                    android:id="@+id/layoutLinkedin"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingHorizontal="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🔗 LinkedIn"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"/>
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="#94A3B8"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#22FFFFFF"/>
+
+                <!-- About -->
+
+                <LinearLayout
+                    android:id="@+id/layoutAbout"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="ℹ About SpendBuddy"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"/>
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="#94A3B8"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- LOGOUT BUTTON -->
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/buttton_pressed"
+            android:text="Logout"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:fontFamily="@font/poppins_bold"
+            tools:ignore="VisualLintButtonSize" />
+
+        <!-- FOOTER -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="SpendBuddy v1.0\nMade with ❤️ by Priyanshu Ranjan"
+            android:textColor="#94A3B8"
+            android:textSize="13sp"
+            android:fontFamily="@font/poppins_regular"
+            android:paddingBottom="30dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

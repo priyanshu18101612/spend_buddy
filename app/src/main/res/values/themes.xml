@@ -1,0 +1,13 @@
+<resources>
+<style name="Theme.Spend_Buddy" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+    <item name="android:windowBackground">@color/bg_dark</item>
+
+    <item name="colorPrimary">@color/primary_green</item>
+    <item name="colorPrimaryVariant">@color/deep_teal</item>
+    <item name="colorAccent">@color/accent_cyan</item>
+
+    <item name="android:textColor">@color/white</item>
+
+</style>
+</resources>

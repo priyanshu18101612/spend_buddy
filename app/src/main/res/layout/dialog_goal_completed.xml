@@ -1,0 +1,56 @@
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/splash_gradient"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <nl.dionsegijn.konfetti.xml.KonfettiView
+        android:id="@+id/konfettiView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"/>
+
+    <!-- Emoji -->
+    <TextView
+        android:text="🎉"
+        android:textSize="40sp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Title -->
+    <TextView
+        android:text="Goal Achieved!"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Message -->
+    <TextView
+        android:id="@+id/tvMessage"
+        android:text="You completed your saving goal 💰🔥"
+        android:textColor="#B0B0C3"
+        android:textSize="14sp"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Button -->
+    <Button
+        android:id="@+id/btnAwesome"
+        android:text="AWESOME 🚀"
+        android:textAllCaps="false"
+        android:textColor="#000"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFD54F"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

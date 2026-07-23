@@ -1,0 +1,159 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#0F0F1A"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- TITLE -->
+        <TextView
+            android:text="Add Expense 💸"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- AMOUNT -->
+        <EditText
+            android:id="@+id/etAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="₹ 0"
+            android:textSize="34sp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#666"
+            android:gravity="center"
+            android:inputType="number"
+            android:padding="10dp"
+            android:background="@android:color/transparent"/>
+
+        <!-- CATEGORY -->
+        <TextView
+            android:text="Category"
+            android:textColor="#AAAAAA"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            app:selectionRequired="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipFood"
+                android:text="🍔 Food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:checked="true"
+                android:textColor="#FFFFFF"
+                app:chipBackgroundColor="#2A2A3D"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTravel"
+                android:text="🚗 Travel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:textColor="#FFFFFF"
+                app:chipBackgroundColor="#2A2A3D"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipShopping"
+                android:text="🛍️ Shopping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:textColor="#FFFFFF"
+                app:chipBackgroundColor="#2A2A3D"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipRecharge"
+                android:text="Recharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:checked="true"
+                android:textColor="#FFFFFF"
+                app:chipBackgroundColor="#2A2A3D"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipGrocery"
+                android:text="Grocery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:checked="true"
+                android:textColor="#FFFFFF"
+                app:chipBackgroundColor="#2A2A3D"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipsalon"
+                android:text="salon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:checked="true"
+                android:textColor="#FFFFFF"
+                app:chipBackgroundColor="#2A2A3D"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipRent"
+                android:text="Rent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:checked="true"
+                android:textColor="#FFFFFF"
+                app:chipBackgroundColor="#2A2A3D"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipOther"
+                android:text="📦 Other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:textColor="#FFFFFF"
+                app:chipBackgroundColor="#2A2A3D"/>
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- NOTE -->
+        <EditText
+            android:id="@+id/etNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Note (optional)"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:backgroundTint="#8A2BE2"/>
+
+        <!-- SAVE BUTTON -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Save Expense 🚀"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:backgroundTint="#B39DDB"
+            android:textColor="#000"
+            android:layout_marginTop="30dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

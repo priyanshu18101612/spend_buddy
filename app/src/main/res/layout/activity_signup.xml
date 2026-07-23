@@ -1,0 +1,112 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/splash_gradient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+        <!-- APP TITLE -->
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="137dp"
+            android:layout_height="133dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_spendbuddy" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Create Account 🚀"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:text="Start your smart saving journey."
+            android:textColor="#AAAAAA"
+            android:layout_marginBottom="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- CARD -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/card_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- EMAIL -->
+            <EditText
+                android:id="@+id/etEmail"
+                android:hint="Email"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#888"
+                android:padding="12dp"
+                android:background="@drawable/edit_bg"
+                android:layout_marginBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- PASSWORD -->
+            <EditText
+                android:id="@+id/etPassword"
+                android:hint="Password"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#888"
+                android:padding="12dp"
+                android:background="@drawable/edit_bg"
+                android:inputType="textPassword"
+                android:layout_marginBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- CONFIRM -->
+            <EditText
+                android:id="@+id/etConfirmPassword"
+                android:hint="Confirm Password"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#888"
+                android:padding="12dp"
+                android:background="@drawable/edit_bg"
+                android:inputType="textPassword"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- BUTTON -->
+            <Button
+                android:id="@+id/btnSignup"
+                android:text="Create Account 🚀"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:backgroundTint="@drawable/buttton_pressed"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+        </LinearLayout>
+
+        <!-- LOGIN LINK -->
+        <TextView
+            android:id="@+id/tvLogin"
+            android:text="Already a member? Login"
+            android:textColor="#00E676"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</ScrollView>

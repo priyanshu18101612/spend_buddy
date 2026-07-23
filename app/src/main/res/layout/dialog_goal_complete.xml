@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="@drawable/card_bg">
+
+    <!-- Trophy -->
+
+    <ImageView
+        android:id="@+id/imgTrophy"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/ic_trophy"/>
+
+    <!-- Title -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Congratulations! 🎉"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"/>
+
+    <!-- Subtitle -->
+
+    <TextView
+        android:id="@+id/tvGoalMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You achieved your saving goal!"
+        android:textColor="#B0BEC5"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Tree -->
+
+    <ImageView
+        android:id="@+id/imgTree"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/tree_golden"/>
+
+    <!-- Reward -->
+
+    <TextView
+        android:id="@+id/tvReward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🍃 +50 Leaves"
+        android:textColor="#00E676"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_marginTop="18dp"/>
+
+    <!-- Achievement -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🏆 Achievement Unlocked"
+        android:textColor="#FFD54F"
+        android:textSize="18sp"
+        android:layout_marginTop="12dp"/>
+
+    <!-- Button -->
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:backgroundTint="#00E676"/>
+
+</LinearLayout>

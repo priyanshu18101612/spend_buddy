@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_gradient">
+
+    <!-- 🔥 SCROLL -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- 🔥 HEADER -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Insights 📊"
+                    android:textSize="24sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/poppins_bold"/>
+
+            </RelativeLayout>
+
+            <!-- 🔥 TOP CARDS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:weightSum="3">
+
+                <!-- TOTAL -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:padding="14dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/glow_card_bg">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total"
+                        android:textColor="#94A3B8"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/poppins_regular"/>
+
+                    <TextView
+                        android:id="@+id/totalSpend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹0"
+                        android:textColor="#00E676"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/poppins_bold"/>
+
+                    <TextView
+                        android:id="@+id/tvTotalTrend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="▲ 12% vs last week"
+                        android:textSize="11sp"
+                        android:textColor="#00E676"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+                <!-- AVG -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:padding="14dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/card_bg">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Average"
+                        android:textColor="#94A3B8"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/poppins_regular"/>
+
+                    <TextView
+                        android:id="@+id/avgSpend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹0"
+                        android:textColor="#38BDF8"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/poppins_bold"/>
+
+                    <TextView
+                        android:id="@+id/tvAvgTrend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="▲ Stable"
+                        android:textSize="11sp"
+                        android:textColor="#38BDF8"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+                <!-- TRANSACTIONS -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="14dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/card_bg">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Transaction"
+                        android:textColor="#94A3B8"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/poppins_regular"/>
+
+                    <TextView
+                        android:id="@+id/totalTransactions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#FACC15"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/poppins_bold"/>
+
+                    <TextView
+                        android:id="@+id/tvTransactionTrend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="This Week"
+                        android:textSize="11sp"
+                        android:textColor="#FACC15"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 🤖 AI INSIGHT -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/card_bg"
+                android:orientation="horizontal"
+                android:padding="18dp"
+                android:gravity="center_vertical">
+
+                <!-- Robot -->
+                <ImageView
+                    android:id="@+id/imgRobot"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_robot"
+                    android:contentDescription="AI Robot"/>
+
+                <!-- Text Section -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AI Insight 🤖"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/poppins_bold"/>
+
+                    <TextView
+                        android:id="@+id/insightText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Food spending is 45% of your total expenses.\nTry reducing online orders to save more."
+                        android:textColor="#C7D2FE"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:lineSpacingExtra="3dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 🔥 TOP CATEGORY -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/card_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Top Category 🏆"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins_bold"/>
+
+                <TextView
+                    android:id="@+id/topCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Food ₹0"
+                    android:textColor="#BB86FC"
+                    android:textSize="22sp"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/poppins_bold"/>
+
+                <ProgressBar
+                    android:id="@+id/categoryProgress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:max="100"
+                    android:progress="70"
+                    android:progressTint="#BB86FC"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+            <!-- 🔥 PIE CHART -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/card_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expense Overview 📊"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins_bold"/>
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"/>
+            </LinearLayout>
+
+            <!-- 🔥 BAR CHART -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/card_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daily Spending 📈"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins_bold"/>
+
+                <!-- 🔥 WEEKLY SUMMARY -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Weekly Summary 📅"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:layout_marginBottom="12dp"/>
+
+                    <!-- Row 1 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <!-- Total Spend -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="8dp"
+                            android:background="@drawable/card_bg"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:text="💰 Total"
+                                android:textColor="#94A3B8"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:textSize="13sp"/>
+
+                            <TextView
+                                android:id="@+id/tvWeekTotal"
+                                android:text="₹0"
+                                android:textColor="#00E676"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:textStyle="bold"
+                                android:textSize="20sp"/>
+                        </LinearLayout>
+
+                        <!-- Average -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/card_bg"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:text="📊 Average"
+                                android:textColor="#94A3B8"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:textSize="13sp"/>
+
+                            <TextView
+                                android:id="@+id/tvWeekAverage"
+                                android:text="₹0"
+                                android:textColor="#38BDF8"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:textStyle="bold"
+                                android:textSize="20sp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Row 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <!-- Transactions -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="8dp"
+                            android:background="@drawable/card_bg"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:text="🧾 Transactions"
+                                android:textColor="#94A3B8"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:textSize="13sp"/>
+
+                            <TextView
+                                android:id="@+id/tvWeekTransactions"
+                                android:text="0"
+                                android:textColor="#FACC15"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"/>
+                        </LinearLayout>
+
+                        <!-- Highest Category -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="90dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/card_bg"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:text="🏆 Top Category"
+                                android:textColor="#94A3B8"
+                                android:textSize="13sp"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"/>
+
+                            <TextView
+                                android:id="@+id/tvWeekTopCategory"
+                                android:text="Food"
+                                android:textColor="#BB86FC"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/lineChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

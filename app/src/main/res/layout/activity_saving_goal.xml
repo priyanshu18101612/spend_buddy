@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 🔥 SCROLL CONTENT -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splash_gradient">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- TITLE -->
+            <TextView
+                android:text="Saving Goal 🎯"
+                android:textSize="26sp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/poppins_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="#1A1F2E"
+                app:strokeColor="#25FFFFFF"
+                app:strokeWidth="1dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/goalTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="No Goal Set"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/goalAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="₹0 / ₹0"
+                        android:textColor="#94A3B8"
+                        android:textSize="16sp" />
+
+                    <!-- PROGRESS -->
+                    <com.github.lzyzsd.circleprogress.DonutProgress
+                        android:id="@+id/circularProgress"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        app:donut_finished_color="#00E676"
+                        app:donut_max="100"
+                        app:donut_progress="0"
+                        app:donut_text_color="#FFFFFF"
+                        app:donut_text_size="22sp"
+                        app:donut_unfinished_color="#2A2D4A" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="📈 Saving Trend"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/poppins_bold"/>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="18dp"
+                        app:cardBackgroundColor="#14FFFFFF"
+                        app:strokeColor="#25FFFFFF"
+                        app:strokeWidth="1dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="14dp"
+                            android:orientation="vertical">
+
+                            <com.github.mikephil.charting.charts.LineChart
+                                android:id="@+id/savingChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="170dp"/>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Last 7 Days Saving Trend"
+                        android:textColor="#94A3B8"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/poppins_regular"/>
+
+                    <LinearLayout
+                        android:id="@+id/challengeCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:padding="16dp"
+                        android:background="@drawable/card_bg"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:text="🎯 Today's Challenge"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#FFFFFF"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/tvChallenge"
+                            android:layout_marginTop="8dp"
+                            android:text="No Food Delivery Today 🍔"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/tvReward"
+                            android:layout_marginTop="6dp"
+                            android:text="Reward 🍃 +5 Leaves"
+                            android:textColor="#00E676"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"/>
+
+                        <ProgressBar
+                            android:id="@+id/challengeProgress"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:layout_marginTop="10dp"
+                            android:max="100"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/tree_progress"/>
+
+                        <TextView
+                            android:id="@+id/tvChallengeStatus"
+                            android:layout_marginTop="8dp"
+                            android:text="0 / 1 Completed"
+                            android:textColor="#94A3B8"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <!-- 🔥 STREAK CARD -->
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        app:cardCornerRadius="18dp"
+                        app:cardBackgroundColor="@color/bg_dark"
+                        app:strokeColor="#25FFFFFF"
+                        app:strokeWidth="1dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="18dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <!-- Fire -->
+
+                            <FrameLayout
+                                android:layout_width="56dp"
+                                android:layout_height="56dp">
+
+                                <View
+                                    android:id="@+id/fireGlow"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/fire_glow"
+                                    android:visibility="gone"/>
+
+                                <ImageView
+                                    android:id="@+id/fireIcon"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_fire"
+                                    android:visibility="gone"
+                                    app:tint="#FF7043"/>
+                            </FrameLayout>
+
+                            <!-- Text -->
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_marginStart="16dp">
+
+                                <TextView
+                                    android:id="@+id/tvStreakMessage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Saving Streak 🔥"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18sp"
+                                    android:fontFamily="@font/poppins_bold"/>
+
+                                <TextView
+                                    android:id="@+id/streakText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:text="0 Days"
+                                    android:textColor="#FFD54F"
+                                    android:textSize="24sp"
+                                    android:fontFamily="@font/poppins_bold"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Keep saving every day to grow your streak."
+                                    android:textColor="#94A3B8"
+                                    android:textSize="12sp"
+                                    android:layout_marginTop="4dp"
+                                    android:fontFamily="@font/poppins_regular"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Daily -->
+                    <TextView
+                        android:id="@+id/daily"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="16dp"
+                        android:text="Daily Needed : ₹0"
+                        android:textSize="15sp"
+                        android:textColor="#00E676"
+                        android:fontFamily="@font/poppins_bold"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+                    <!-- BUTTONS -->
+                    <Button
+                        android:id="@+id/btnAddSaving"
+                        android:text="➕ Saving"
+                        android:textAllCaps="false"
+                        android:textSize="15sp"
+                        android:textColor="#000000"
+                        android:backgroundTint="#00E676"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"/>
+
+                    <Button
+                        android:id="@+id/btnSetGoal"
+                        android:text="✏ Goal🎯"
+                        android:textAllCaps="false"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#3B82F6"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 🎉 CONFETTI (OVERLAY) -->
+    <nl.dionsegijn.konfetti.xml.KonfettiView
+        android:id="@+id/konfettiView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>

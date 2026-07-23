@@ -1,0 +1,63 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#0F0F1A"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="🎯 Set Saving Goal"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etGoalTitle"
+            android:hint="Goal name"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888"
+            android:backgroundTint="#8A2BE2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etTargetAmount"
+            android:hint="Target Amount (₹)"
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888"
+            android:backgroundTint="#8A2BE2"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etDays"
+            android:hint="Days (e.g. 30)"
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888"
+            android:backgroundTint="#8A2BE2"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnSaveGoal"
+            android:text="Save Goal 🚀"
+            android:textAllCaps="false"
+            android:textColor="#000"
+            android:backgroundTint="#B39DDB"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+</ScrollView>
