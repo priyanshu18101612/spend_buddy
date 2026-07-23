@@ -26,9 +26,23 @@ A modern Android-based Student Finance Manager built using **Java**, **Firebase 
 - MPAndroidChart
 - Material Design
 
-## 📸 Screenshots
+## 📸 App Screenshots
 
-> Screenshots will be added soon.
+| Login | Dashboard |
+|-------|-----------|
+| ![](screenshots/login.png) | ![](screenshots/dashboard.png) |
+
+| Add Expense | AI Insights |
+|------------|-------------|
+| ![](screenshots/add_expense.png) | ![](screenshots/insights.png) |
+
+| Saving Goal | Stats |
+|-------------|-------|
+| ![](screenshots/saving_goal.png) | ![](screenshots/stats.png) |
+
+| Settings |
+|----------|
+| ![](screenshots/settings.png) |
 
 ## 🚀 Installation
 
